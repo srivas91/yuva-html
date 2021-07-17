@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mybtn
+        {
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    Covid Death rate is increasing daily <span id="dots">...</span>
+    <p id="content">TN Govt is trying to control <br/>
+        that for the people
+    </p>
+    <input type="button" id="mybtn" value="read less" onclick="showcontent()">
+    <script>
+        function showcontent()
+        {
+            var s=document.querySelector("#mybtn");
+            var m=document.querySelector("#content");
+            var d=document.querySelector("#dots");
+            console.log(s.value);
+            if(s.value=="read less")
+            {
+                d.style.display="inline";  //show dots
+                m.style.display="none";  // hide paragraph content
+                s.value="read more";
+            }
+            else if(s.value=="read more")
+            {
+                d.style.display="none";  //hide dots
+                m.style.display="block";  //show paragraph content
+                s.value="read less";   
+            }
+        }
+    </script>
+</body>
+</html>

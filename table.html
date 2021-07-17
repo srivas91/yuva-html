@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>table</title>
+    <style>
+        tr:nth-child(2n) 
+        /* even-rows n=0,1,2 */
+        {
+            background-color: yellowgreen;
+        }
+        tr:nth-child(2n+1) 
+        {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <table border=3 align="center" cellspacing=5 cellpadding=5>
+        <caption>student courses details</caption> 
+        <tr>
+            <th>Courses</th>
+            <th>Duration</th>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>2 months</td>
+        </tr>
+        <tr>
+            <td>Java</td>
+            <td>3 months</td>
+        </tr>
+        <tr>
+            <td>PHP</td>
+            <td>2 months</td>
+        </tr>
+    </table>
+</body>
+</html>

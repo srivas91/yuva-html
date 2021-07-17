@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+  $("#course").click(function(){
+    $("#details").slideDown("slow");
+  });
+});
+</script>
+<style>
+    #course
+    {
+        padding:20px;
+    }
+</style>
+</head>
+<body>
+
+<div id="course">Courses Offered</div>
+<div id="details">Java<br/>
+PHP<br/>
+Python</div>
+</body>
+</html>

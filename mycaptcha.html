@@ -1,0 +1,64 @@
+
+<html>
+    <head>
+    <title>captcha</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    h4
+    {
+       color:blue;
+      font-size:14px;
+      text-transform:capitalize;
+    }
+    input[type="text"]:read-only
+    {
+    opacity:0.7;
+      color:green;
+    }
+    </style>
+    </head>
+    <body bgcolor="yellow" onload="mycap()">
+    <input type="text" id="captcha" readonly>
+    <span id="refresh" onclick="mycap()"><i class="fas fa-redo"></i></span><br/>
+    <h4>Type above captcha in below text field</h4>
+    <input type="text" id="userdata" maxlength="6">
+    <input type="submit" value="click" onclick="validate()">
+    <script type="text/javascript">
+    var s=document.querySelector("#captcha");
+    var m=document.querySelector("#refresh");
+    var d=document.querySelector("#userdata");
+    var sum=0;
+    function mycap()
+    {
+    
+    var alpha=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",
+                       "a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",
+                       "1","2","3","4","5","6","7","8","9","10"];
+    var one=alpha[Math.floor(Math.random()*62)];
+    var two=alpha[Math.floor(Math.random()*62)];
+    var three=alpha[Math.floor(Math.random()*62)];
+    var four=alpha[Math.floor(Math.random()*62)];
+    var five=alpha[Math.floor(Math.random()*62)];
+    var six=alpha[Math.floor(Math.random()*62)];
+    var sum=one+two+three+four+five+six;
+    // console.log(sum);
+    s.value=sum;
+    }
+    function validate()
+    {
+        if(s.value==d.value)
+        {
+            alert('success');
+        }
+       else
+       {
+          alert('invalid captcha');
+        }
+    }
+    
+    
+    
+    </script>
+    </body>
+    </html>
+    

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drop down</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        *
+        {
+            margin:0;
+            padding:0;
+        }
+        ol li{
+            list-style-type: none;
+          float:left;
+           padding:10px;
+           background-color: yellow;
+                   }
+                   ol li>ol
+                   {
+                       display:none;
+                   }
+        ol li:hover>ol
+        {
+            /* padding-left:0px; */
+            display:flex;
+            flex-direction: column;
+        }
+        .fas
+        {
+            color:blue;
+        }
+        img
+        {
+            position:absolute;
+            margin-left:-200px;
+            top:50px;
+        }
+    </style>
+</head>
+<body>
+    
+    <ol>
+        <li>home</li>
+        <li>about us</li>
+        <li>contact us</li>
+        <li>courses <i class="fas fa-caret-down"></i>
+            <ol>
+                <li>Java</li>
+                <li>Python</li>
+             </ol>
+        </li>
+    </ol>
+    <!-- <img src="website.svg" width=200 height=200  id="id1"> -->
+    <h4 id="id2">Happy Evening</h4>
+    <input type="button" value="show" onclick="showtxt()">
+    <input type="button" value="hide" onclick="hidetxt()">
+    
+    <!-- <input type="button" value="show" onclick="showimage()">
+    <input type="button" value="hide" onclick="hideimage()"> -->
+    <script>
+        function showtxt()
+        {
+              var m=document.getElementById("id2");
+              m.style.display="block";
+        }
+        function hidetxt()
+        {
+            var m=document.getElementById("id2");
+              m.style.display="none";
+        }
+        // function showimage()
+        // {
+        //      var s=document.querySelector("#id1");
+        //      s.style.visibility="visible";
+        // }
+        // function hideimage()
+        // {
+        //      var s=document.querySelector("#id1");
+        //      s.style.visibility="hidden";
+        // }
+    </script>
+</body>
+</html>

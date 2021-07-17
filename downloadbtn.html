@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Download Process</title>
+</head>
+
+<body bgcolor=yellow>
+    <h2 id="myid">Downloading file</h2>
+    <progress id="file" value="20" max="200">20%</progress>
+   <script>
+      function fun()
+       {
+              var s=document.getElementById("file");
+              s.value=s.value+10;
+             var m=document.getElementById("myid");
+            if(s.value==200){
+             m.innerHTML="file downloaded";
+             s.style.display="none";
+           }
+       }
+     setInterval(fun,1000);
+     </script>
+</body>
+</html>
+

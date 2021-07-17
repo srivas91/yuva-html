@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu</title>
+    <style>
+        header{
+            display:flex;
+            flex-wrap: wrap;
+            gap: 30px;    
+        }
+        header>a:hover>ul
+        {
+            margin-top:0px;
+            display:block;
+            position:absolute;
+            padding:20px;
+            background-color: aqua;
+            border:3px solid blue;
+            list-style-type: none;
+        }
+        ul
+        {
+        display:none;
+        }
+    </style>
+</head>
+<body>
+    
+        <header><a href="#">home</a>
+            <a href="#">about us</a>
+            <a href="#">contact us</a>
+            <a href="#">courses offered
+                <ul><li>Java</li>
+                <li>Python</li></ul></a></header>
+   
+</body>
+</html>

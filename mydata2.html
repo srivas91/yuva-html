@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="test.php">
+        <input type="text" data-user-error="username is must" required name="username" id="username">
+        <span id="id1"></span><br/>
+        <input type="submit" value="login" onclick="validate()">
+    </form>
+    <script>
+        function validate()
+        {
+            var a=document.getElementById("username").value;
+            var n=document.querySelector("#username");
+            var b=document.getElementById("id1");
+            if(a.length==0)
+            {
+                var m=n.dataset.userError;
+                b.innerText=m;
+                b.style.color='red';
+                b.style.backgroundColor='yellow';
+            }
+        
+        }
+    </script>
+</body>
+</html>

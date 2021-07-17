@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        svg {
+  width: 300px;
+  display: block;
+  position: absolute;
+        }
+  .path {
+    stroke-dasharray: 0;    
+    stroke-dashoffset: 320;    
+    animation: dash 5s ease;
+  }
+
+  @keyframes dash {
+    from {
+      stroke-dasharray: 0;
+    }
+    to {
+      stroke-dasharray: 320;
+    }
+  }
+    </style>
+</head>
+<body>
+    <svg width="300px" height="175px" version="1.1">
+        <path fill="transparent" stroke="#000000" stroke-width="4" d="M10 80 Q 77.5 10, 145 80 T 280 80" class="path"></path>
+    </svg>
+    
+</body>
+</html>

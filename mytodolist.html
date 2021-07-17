@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <input type="text" name="" id="item1" placeholder="enter item">
+        <input type="button" value="Add" onclick="addItem()">
+    </div>
+    <script>
+        var mylist=document.createElement('ol');
+        function addItem()   
+        {
+            var d=document.getElementById('item1').value;
+            var mydiv=document.createElement('div');
+            mydiv.setAttribute('id','myid');
+            var listitem=document.createElement('li');
+            listitem.setAttribute('id','listid');
+            listitem.textContent=d;    
+            // listitem.style.display='inline';
+            var mybutton=document.createElement('input');
+            mybutton.setAttribute('type','button');
+            mybutton.setAttribute('value','remove'); 
+            mybutton.addEventListener('click',()=>{
+              mybutton.parentNode.removeChild(listitem);
+               mybutton.parentNode.removeChild(mybutton);
+               alert('item deleted succesfully');
+            })
+        
+            mydiv.appendChild(listitem);  
+            mydiv.appendChild(mybutton);
+            mylist.appendChild(mydiv);
+            document.body.appendChild(mylist);
+            // console.log(d);
+            // console.log(mydiv);
+            console.log(mylist);
+        }
+    </script>
+</body>
+</html>

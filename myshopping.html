@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .fas
+        {
+            color:red;
+        }
+        #shopid
+        {
+            margin-left:50px;
+        }
+        #cartbtn
+        {
+            color:blue;
+            background-color:rgb(37, 182, 150);
+            border-radius:20px;
+        }
+    </style>
+    
+</head>
+<body>
+    <i class="fas fa-shopping-cart"><span id="itemcount"></span></i>
+    <div id="shopid"><button id="cartplus" onclick="addCart()">+</button>
+    <span id="id1"></span>
+    <button id="cartminus" onclick="removeCart()">-</button>
+</div>
+  <button id="cartbtn" onclick="cartitem()">Add to Cart</button>
+  <div id="id3"></div>
+  <script src="myscript.js"></script>
+</body>
+</html>

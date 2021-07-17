@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor=yellow>
+<script>
+    // var programming=['java','python','js'];
+    // programming.push('php');
+    // programming.push('perl');
+    // console.log('size of array is',programming.length);
+    // // for(let i of programming)
+    // // console.log(i);
+    // programming.forEach(function(a){
+    //       console.log(a.toUpperCase());
+    // });
+    
+    let inches=[1,2,3,4];
+    function myconversion(a)
+    {
+        return a*1000;
+    }
+    let converted=inches.map(myconversion,inches);
+    // console.log(converted);
+    inches.push(5);  // add element to end of an array
+    inches.unshift(10); // add element as first
+    inches.shift();  // remove first element from an array
+     inches.pop();   //remove last element from an array
+    console.log(inches);
+    let twoindex=inches.indexOf(2);
+    inches.splice(twoindex,1);  // delete element from this index
+    console.log(inches);
+    // var mynum=[20,30,40,-50,60,-70];
+    // let num=mynum.filter(function(a)
+    // {
+    //     return a>0;
+    // })
+    // console.log(num);
+    // for(let i=0;i<programming.length;i++)
+    // {
+    //     if(programming[i].endsWith('a')){
+    // console.log(programming[i]);
+    //     }
+    // }
+</script>
+</body>
+</html>

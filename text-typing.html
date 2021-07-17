@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            color:blue;  
+            animation:demo 6s steps(26) infinite;
+            white-space:nowrap;
+            font-size:50px;
+            overflow:hidden;
+        }
+        @keyframes demo
+        {
+            0%
+            {
+                width:0;
+            }
+            50%
+            {
+                width:26ch;
+            }
+            100%
+            {
+                width:0;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <h2>I am <span id="typetext"></span></h2>
+    <script>
+        var i=0;
+        var speed=50;
+        var text=['front end developer','full stack developer'];
+        typingtext(0);
+        function typingtext(val)
+        {
+           let textdata=text[m];
+           console.log(textdata.length);
+           let n=textdata.length;
+           if(i<n) 
+           {     
+            document.querySelector("#typetext").innerHTML+=textdata.charAt(i);
+            i++;
+        setTimeout(typingtext,speed); 
+           }   
+        
+    }
+        
+        </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .container {
+        background-color: pink;
+        display: grid;    
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 100px 250px 100px;
+    }
+    header {
+    grid-column: span 12;
+    display: flex;
+    color:blue;
+    justify-content: center;
+    text-shadow: 2px 2px 3px red;
+}
+aside{
+    grid-column: span 2; /* expand to two columns */
+    border:2px solid blue;
+}
+main{
+    grid-column: span 10;  /* expand to two columns */
+    border:2px solid magenta;
+}
+footer{
+    margin-left:300px;
+    grid-column:span 12;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <header>  
+            Arun University 
+        </header>
+        <aside><a href="#main" target='_parent'>Home</a><br/>
+            <a href="about.html">About Us</a></aside>
+        <main>nice to see you</main>
+        <footer>Arun Corporation &copy;</footer>
+      </div>
+</body>
+</html>

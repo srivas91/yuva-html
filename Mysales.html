@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 100px;
+            width:100px;
+        }
+        .product-list a{
+            text-decoration:none;
+            float:left;
+            border:2px solid blue;
+            background-color:pink;
+            padding:5px;
+        }
+        .cls1
+        {
+            text-decoration: line-through;
+        }
+        h3
+        {
+            color:blue;
+            animation:demo 2s infinite;
+        }
+        @keyframes demo
+        {
+            from{
+              color:red;
+            }
+            to{
+                color:orange;
+            }
+            
+        }
+        section
+        {
+            margin-top:30px;
+            padding:20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .store-product
+        {
+            background:cyan;
+            border:3px solid blue;
+            text-align:center;
+            line-height: 30px;
+        }
+        .store-product a
+        {
+            margin-top:30px;
+            text-decoration: none;
+            background:linear-gradient(to right,yellow,green,violet);
+            font-weight: bold;
+            font-size:22px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" onsubmit="return false" method="get">
+        <input type="text"  id="search">
+        <input type="submit" value="search">
+    </form>
+    <div class="product-list">
+        <a href="#" class="btn" data-filter="all">All</a>
+        <a href="#" class="btn" data-filter="watch">Watch</a>
+        <a href="#" class="btn" data-filter="shirt">Shirt</a>
+    </div>
+    <section>
+        <div class="store-product watch">
+            <h3>Rolex Watch</h3>
+            <img src="images/rolex.jpeg"><br/>
+            <span class="cls1">Price:25,000</span><br/>
+            Offer Price: &#8377; 23,000<br/>
+            <a href="#">Add to Cart</a>
+        </div>
+        <div class="store-product shirt">
+            <h3>Raymond</h3>
+            <img src="images/raymond.jpg"><br/>
+            <span class="cls1">Price:5,000</span><br/>
+            Offer Price: &#8377;3,000<br/>
+            <a href="#">Add to Cart</a>
+        </div>
+        <div class="store-product watch">
+            <h3>Titan Watch</h3>
+            <img src="images/titan.webp"><br/>
+            <span class="cls1">Price:2,500</span><br/>
+            Offer Price: &#8377;1,500<br/>
+            <a href="#">Add to Cart</a>
+        </div>
+        <div class="store-product watch">
+            <h3>Sonata Watch</h3>
+            <img src="images/sonata.jpeg"><br/>
+            <span class="cls1">Price:5,000</span><br/>
+            Offer Price: &#8377;3,000<br/>
+            <a href="#"><span class="cart">Add to Cart</span></a>
+        </div>
+        <div class="store-product shirt">
+            <h3>Peter England</h3>
+            <img src="images/peterengland.jpg"><br/>
+            <span class="cls1">Price:3,000</span><br/>
+            Offer Price: &#8377;1,500<br/>
+            <a href="#">Add to Cart</a>
+        </div>
+    </section>
+    <script>
+        window.onload=()=>
+        {
+            var d=document.querySelectorAll('.btn');
+            console.log(d[1].dataset.filter);
+        };
+         const btns=document.querySelectorAll('.btn');
+         const storeProducts=document.querySelectorAll('.store-product');
+         for(let i=0;i<btns.length;i++)
+         {
+               btns[i].addEventListener('click',e=>{
+                   e.preventDefault();
+                  const filter=e.target.dataset.filter;
+                  console.log(filter);
+                  storeProducts.forEach((product)=>{
+                     if(filter=='all')
+                     {
+                         product.style.display='block';
+                     }
+                     else
+                     {
+                         if(product.classList.contains(filter))
+                         {
+                             product.style.display='block';
+                         }
+                         else{
+                             product.style.display='none';
+                         }
+                     }
+                  });
+               })
+         }
+         const search=document.querySelector("#search");
+
+         search.addEventListener("keyup",(e)=>{
+             e.preventDefault();
+            const searchValue=search.value.toLowerCase().trim();     
+            for(i=0;i<storeProducts.length;i++)
+            {
+                if(storeProducts[i].classList.contains(searchValue)){
+                    storeProducts[i].style.display="block";
+                }
+                else if(searchValue=="")
+                {
+                    storeProducts[i].style.display="block";
+                }
+                else{
+                    storeProducts[i].style.display="none";
+                }
+            }
+         })
+         
+
+    </script>
+</body>
+</html>

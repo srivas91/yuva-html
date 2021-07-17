@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> 
+<body>
+    <script>
+        window.onload=()=>
+        {
+            var countries=['india','japan','america'];
+            countries.forEach(a=>console.log(a));
+            console.log(countries.length);
+            countries.length=10;
+            countries[5]='china';
+            // countries.forEach(a=>console.log(a));
+            for(let i of countries)
+            {
+                console.log(i);
+            } 
+            console.log(countries.length);
+        }
+    </script>
+</body>
+</html>

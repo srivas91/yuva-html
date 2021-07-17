@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Day:<select id="id1"></select>    
+    Month:<select id="id2"></select>
+    Year:<select id="id3"></select>
+    <script>
+        window.onload=fun();
+        function fun()
+        {
+        var d=document.querySelector("#id1");
+        var f=document.querySelector("#id2");
+        var g=document.querySelector("#id3");
+        var n=3;
+        if(n==1||n==3||n==5||n==7)
+    {
+        for(let i=1;i<=31;i++)
+        {
+            var m=document.createElement('option');
+            m.setAttribute('value',i);
+            m.textContent=i;
+            d.appendChild(m); 
+        }
+    }
+    else{
+        for(let i=1;i<=30;i++)
+        {
+            var m=document.createElement('option');
+            m.setAttribute('value',i);
+            m.textContent=i;
+            d.appendChild(m); 
+        }
+    }
+        for(let j=1;j<=12;j++)
+        {
+            var m=document.createElement('option');
+            m.setAttribute('value',j);
+            m.textContent=j;
+            f.appendChild(m); 
+        }
+        for(let k=1975;k<=2030;k++)
+        {
+            var m=document.createElement('option');
+            m.setAttribute('value',k);
+            m.textContent=k;
+            g.appendChild(m); 
+        }
+        
+        console.log(d);
+        // console.log(f);
+        // console.log(g);
+    }
+        // var m=Math.random(10);
+        // var a=Math.sqrt(3);
+        // var b=Math.pow(5,3);
+        // var c=Math.round(23.56);
+        // console.log(m);
+        // console.log(a);
+        // console.log(b); 
+        // console.log(c);
+    </script>
+</body>
+</html>

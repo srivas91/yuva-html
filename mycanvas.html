@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Canvas</title>
+</head>
+<body>
+    <canvas id="myCanvas" height="300" width="400"></canvas>
+    <script>
+        
+        var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.beginPath();
+ctx.moveTo(200,20);
+ctx.bezierCurveTo(130,20,130,100,180,100);
+ctx.moveTo(200,20);
+ctx.bezierCurveTo(155,20,155,100,180,100);
+ctx.stroke();
+    //     var c=document.querySelector("#mycanvas");
+    //     var ctx=c.getContext("2d");
+    //     ctx.fillStyle="orange";
+    //     ctx.fillRect(200,50,200,100);
+
+    //     ctx.translate(50,25);
+    //     ctx.scale(2,2);
+    //     ctx.rotate((Math.PI/180)*5);
+    //     ctx.fillStyle='red';
+    //     ctx.fillRect(100,50,250,100);
+
+    //     ctx.beginPath();
+    //   ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+    //   ctx.strokeStyle='blue';
+    //  ctx.stroke();    
+    </script>
+</body>
+</html>

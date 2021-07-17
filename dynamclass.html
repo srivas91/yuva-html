@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .cls1{
+        color:blue;
+    }
+    .cls2{
+        background-color:yellow;
+    }
+    .cls3
+    {
+        display:block;
+    }
+    .cls4
+    {
+        display:none;
+    }
+</style>
+</head>
+<body>
+    <h3 id="id1">Good afternoon</h3>
+    <h4>It is Very hot today</h4>
+    <input type="button" id="btnhide" value="hide" onclick="hide()">
+    <input type="button" id="btnshow" value="show" onclick="show()">
+    <script>
+        var s=document.querySelector("#id1");
+        s.classList.add('cls1');  // set color to blue
+        s.classList.add('cls2');   // set background-color to yellow
+        s.classList.add('cls3');   // set display to block
+        console.log(s);
+        function hide()
+        {
+            if(s.classList.contains('cls3'))
+            {
+                
+                s.classList.toggle('cls4');  // set display to none
+                console.log(s);
+            }
+        }
+        function show()
+        {
+            s.classList.toggle('cls4');
+            console.log(s);
+        }
+    </script>
+</body>
+</html>
